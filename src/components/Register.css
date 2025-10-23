@@ -1,0 +1,208 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-header h1 {
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #8b2bda 0%, #ff6ec4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input {
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  font-size: 1em;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8b2bda;
+  box-shadow: 0 0 25px rgba(138, 43, 218, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.password-hint,
+.email-hint {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85em;
+  font-style: italic;
+  margin-top: -5px;
+}
+
+.email-hint {
+  color: rgba(255, 200, 100, 0.8);
+  font-weight: 500;
+}
+
+.btn-register {
+  padding: 18px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #8b2bda 0%, #6a11cb 100%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(138, 43, 218, 0.3);
+  margin-top: 10px;
+}
+
+.btn-register:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(138, 43, 218, 0.4);
+}
+
+.btn-register:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.3) 0%, rgba(255, 100, 100, 0.3) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.register-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95em;
+}
+
+.register-footer a {
+  color: #ff6ec4;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.register-footer a:hover {
+  color: #8b2bda;
+  text-decoration: underline;
+}
+
+/* Custom scrollbar for the card */
+.register-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.register-card::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.register-card::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 218, 0.5);
+  border-radius: 10px;
+}
+
+.register-card::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 43, 218, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 30px 25px;
+  }
+
+  .register-header h1 {
+    font-size: 2em;
+  }
+
+  .btn-register {
+    padding: 15px 25px;
+    font-size: 1em;
+  }
+}
